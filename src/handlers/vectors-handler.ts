@@ -87,18 +87,18 @@ export class VectorsHandler implements ToolHandler {
             },
             fills: {
               type: 'array',
-              items: { type: 'array' },
+              items: { type: 'array', items: { type: 'object' } },
               description: 'Fill palette (array of Paint arrays)'
             },
             vectorNetwork: {
               type: 'object',
               properties: {
                 vertices: { type: 'string' },
-                regions: { type: 'array' },
-                paths: { type: 'array' },
+                regions: { type: 'array', items: { type: 'object' } },
+                paths: { type: 'array', items: { type: 'string' } },
                 handles: { type: 'object' },
                 vertexProps: { type: 'object' },
-                fills: { type: 'array' }
+                fills: { type: 'array', items: { type: 'array', items: { type: 'object' } } }
               },
               description: 'Complete sparse vector network data'
             },

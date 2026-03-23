@@ -105,18 +105,22 @@ export class PagesHandler implements ToolHandler {
             },
             backgrounds: { 
               type: 'array', 
+              items: { type: 'object'},
               description: 'Advanced: Full background paint array (for complex backgrounds)' 
             },
             prototypeBackgrounds: { 
               type: 'array', 
+              items: { type: 'object'},
               description: 'Advanced: Full prototype background paint array (for complex backgrounds)' 
             },
             guides: { 
               type: 'array', 
+              items: { type: 'object'},
               description: 'Advanced: Full guides array (for complex guide setups)' 
             },
             flowStartingPoints: { 
               type: 'array', 
+              items: { type: 'object'},
               description: 'Advanced: Flow starting points array for prototyping' 
             }
           },
